@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="borderStyleEdge">
+<head>
+    <title>Elin - Front end developer</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Elin Hammarstedt's portfolio - portfolio" /> 
+    <meta name="author" content="Elin Hammarstedt">
+
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500,700,900" rel="stylesheet">
+    <!--stylesheets-->
+    <link rel="stylesheet" type="text/css" href="css/generalStyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="css/tablet.css" />
+    <link rel="stylesheet" type="text/css" href="css/desktop.css" />
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+
+</head>
+<body class="bg-grad--5a bg--5c mobile--bg--5b">
+    <!--Menu Start-->
+    <header>
+        <?php
+        include 'menu.php';
+        ?>
+    </header>
+    <!--Menu end-->
+    <!--Content start-->
+    <main>
+        <div class="divContent" id="Page-Portfolio">
+            <div class="divContent2">
+                <div class="block-hz-split block-hz-split--medium">
+                    <div class="block-hz-split__over bg--white mobile--border mobile--border-top" id="captionUnderConstruction">
+                        <h1>under construction</h1>
+                    </div>
+
+                    <!--top left side start-->
+                    <div class="block-hz-split__col block-hz-split__col--50 bg--5a mobile--bg--5a bg--stripe mobile--large-fill mobile--border mobile--border-top">
+                        <!--shall be empty-->
+                    </div>
+                    <!--top left side end-->
+
+                    <!--top right side start-->
+                    <div class="block-hz-split__col block-hz-split__col--50 bg--5b">
+                        <!--shall be empty-->
+                    </div>
+                    <!--top right side end-->
+                </div>
+
+                <div class="block-hz-split block-hz-split--medium bg--5a">
+                    <!--bottom left side start-->
+                    <div class="block-hz-split__col block-hz-split__col--50 border--top">
+                        <div class="block-hz-split">
+                            <div class="block-hz-split__col block-hz-split__col--20 bg--5b">
+                            </div>
+                            <div class="block-hz-split__col block-hz-split__col--80 block--padding-05 bg--white mobile--margin-top-15 mobile--border mobile--border-top">
+                               <iframe src="https://player.vimeo.com/video/6246701?autoplay=1&loop=1&color=ffff00&title=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <!--bottom left side end-->
+
+                    <!--bottom right side start-->
+                    <div class="block-hz-split__col block-hz-split__col--50 bg--5a border--top">
+                        <div class="block-hz-split">
+                            <div class="block-hz-split__col block-hz-split__col--50 bg--stripe bg--5a">
+                            </div>
+                            <div class="block-hz-split__col block-hz-split__col--50 bg--5b">
+                            </div>
+                        </div>
+                    </div>
+                    <!--bottom right side end-->
+                </div>
+            </div>
+
+            <div class="bg--white mobile--border mobile--border-top mobile--margin-top-15 text--center" id="shareContainer">
+                <h3 class="desktop--hidden" id="shareCaption">share</h3>
+                <a class="share-btn share-facebook" id="shareFacebook" href="javascript:share('https://facebook.com/sharer.php?u=' + encodeURIComponent(document.URL))"></a>
+                <a class="share-btn share-twitter" id="shareTwitter" href="javascript:share('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL))"></a>
+                <a class="share-btn share-linkedin" id="shareLinkedIn" href="javascript:share('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title))"></a>
+                <a class="share-btn share-email" id="shareEmail" href="javascript:share('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL))"></a>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="javascript/menu.js"></script>
+    <script type="text/javascript" src="javascript/social.js"></script>
+</body>
+</html>
