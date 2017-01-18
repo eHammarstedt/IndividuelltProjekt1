@@ -13,7 +13,7 @@
     <!--Menu Start-->
     <header>
         <?php
-        include 'menu.php';
+            include './includes/menu.php';
         ?>
     </header>
     <!--Menu end-->
@@ -67,13 +67,13 @@
 
             <div class="bg--white mobile--border mobile--border-top mobile--margin-top-15 text--center" id="shareContainer">
                 <?php
-                    include 'social.php';    
+                    include './includes/social.php';    
                 ?>
             </div>
         </div>
     </main>
     <?php
-        include './includes/social.php';    
+        include './includes/footer.php';    
     ?>
 </body>
 </html>

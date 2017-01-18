@@ -10,20 +10,10 @@
 
 ?>
 <body class="bg-grad--3a mobile--bg--3a">
-<!--FB widget script-->
-<!--<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>-->
-
     <!--Menu Start-->
     <header>
         <?php
-            include 'menu.php';
+            include './includes/menu.php';
         ?>
     </header>
     <!--Menu end-->
@@ -97,13 +87,13 @@
 
             <div class="bg--white mobile--border mobile--border-top mobile--margin-top-15 text--center" id="shareContainer">
                 <?php
-                    include 'social.php';    
+                    include './includes/social.php';    
                 ?>
             </div>
         </div>
     </main>
     <?php
-        include './includes/social.php';    
+        include './includes/footer.php';    
     ?>
 </body>
 </html>

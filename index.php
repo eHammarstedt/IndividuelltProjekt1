@@ -13,7 +13,7 @@
     <!--Menu Start-->
     <header>
         <?php
-            include 'menu.php';
+            include './includes/menu.php';
         ?>
     </header>
     <!--Menu end-->
@@ -23,7 +23,7 @@
             <div class="divContent2">
                 <div class="block-hz-split block-hz-split--large">
                     <div class="block-hz-split__over bg--white mobile--border mobile--border-top">
-                        <h1>Elin Hammarstedt<br>
+                        <h1 class="editable-text">Elin Hammarstedt<br>
                         Front end developer</h1>
                     </div>
 
@@ -114,13 +114,13 @@
 
             <div class="mobile--bg--1b mobile--border mobile--border-top mobile--margin-top-15 text--center" id="shareContainer">
                 <?php
-                    include 'social.php';    
+                    include './includes/social.php';    
                 ?>
             </div>
         </div>
     </main>
     <?php
-        include './includes/social.php';    
+        include './includes/footer.php';    
     ?>
 </body>
 </html>
