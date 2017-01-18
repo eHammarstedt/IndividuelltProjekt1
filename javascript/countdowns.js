@@ -17,19 +17,28 @@ function getTimeRemaining(endtime){
 }
 
 function initializeClock(clockcontainer, endtime){
-	var clock = document.getElementById(clockcontainer);
-	var daysSpan = clock.querySelector('.days');
-	var hoursSpan = clock.querySelector('.hours');
-	var minutesSpan = clock.querySelector('.minutes');
-	var secondsSpan = clock.querySelector('.seconds');
+	// var clock = document.getElementById(clockcontainer);
+	// var daysSpan = clock.querySelector('.days');
+	// var hoursSpan = clock.querySelector('.hours');
+	// var minutesSpan = clock.querySelector('.minutes');
+	// var secondsSpan = clock.querySelector('.seconds');
+	var clock = $("#" + clockcontainer);
+	var daysSpan = clock.find(".days");
+	var hoursSpan = clock.find(".hours");
+	var minutesSpan = clock.find(".minutes");
+	var secondsSpan = clock.find(".seconds");
 
 	function updateClock(){
 	    var time = getTimeRemaining(endtime);
 
-	    daysSpan.innerText = time.days;
-	    hoursSpan.innerText = ('0' + time.hours).slice(-2);
-	    minutesSpan.innerText = ('0' + time.minutes).slice(-2);
-	    secondsSpan.innerText = ('0' + time.seconds).slice(-2);
+	    // daysSpan.innerText = time.days;
+	    // hoursSpan.innerText = ('0' + time.hours).slice(-2);
+	    // minutesSpan.innerText = ('0' + time.minutes).slice(-2);
+	    // secondsSpan.innerText = ('0' + time.seconds).slice(-2);
+	    daysSpan.text( time.days );
+	    hoursSpan.text( ('0' + time.hours).slice(-2) );
+	    minutesSpan.text( ('0' + time.minutes).slice(-2) );
+	    secondsSpan.text( ('0' + time.seconds).slice(-2) );
 
 		if (time.total <= 0) {
 			clearInterval(timeinterval);
@@ -47,3 +56,4 @@ initializeClock('clockLIA', internship);
 //Count down to Internship
 var graduation = "2018-05-31T12:00:00";
 initializeClock('clockGraduation', graduation);
+

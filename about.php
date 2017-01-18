@@ -1,24 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" class="borderStyleEdge">
-<head>
-    <title>Elin - Front end developer</title>
+<?php include('./includes/header.php');
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Elin Hammarstedt's portfolio - about" /> 
-    <meta name="author" content="Elin Hammarstedt">
+        $dbusername = "root";
+        $dbhost = "localhost";
+        $dbpassword = "";
+        $dbdatabas = "individualProject";
 
-    <!--google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500,700,900" rel="stylesheet">
-    <!--stylesheets-->
-    <link rel="stylesheet" type="text/css" href="css/generalStyle.css" />
-    <link rel="stylesheet" type="text/css" href="css/mobile.css" />
-    <link rel="stylesheet" type="text/css" href="css/tablet.css" />
-    <link rel="stylesheet" type="text/css" href="css/desktop.css" />
-    
-    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+      $connection = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbdatabas);
+      $result = mysqli_query( $connection, "SELECT * FROM abouttext WHERE id IN (1, 2)" );
 
-</head>
+?>
 <body class="bg-grad--4a bg--4b mobile--bg--4c">
     <!--Menu Start-->
     <header>
@@ -83,15 +73,14 @@
             </div>
 
             <div class="mobile--bg--4a mobile--border mobile--border-top mobile--margin-top-15 text--center" id="shareContainer">
-                <h3 class="desktop--hidden" id="shareCaption">share</h3>
-                <a class="share-btn share-facebook" id="shareFacebook" href="javascript:share('https://facebook.com/sharer.php?u=' + encodeURIComponent(document.URL))"></a>
-                <a class="share-btn share-twitter" id="shareTwitter" href="javascript:share('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL))"></a>
-                <a class="share-btn share-linkedin" id="shareLinkedIn" href="javascript:share('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title))"></a>
-                <a class="share-btn share-email" id="shareEmail" href="javascript:share('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL))"></a>
+                <?php
+                    include 'social.php';    
+                ?>
             </div>
         </div>
     </main>
-    <script type="text/javascript" src="javascript/menu.js"></script>
-    <script type="text/javascript" src="javascript/social.js"></script>
+    <?php
+        include './includes/social.php';    
+    ?>
 </body>
 </html>
