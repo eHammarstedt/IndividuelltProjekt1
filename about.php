@@ -1,10 +1,5 @@
 <?php include('./includes/header.php');
-
-        $dbusername = "root";
-        $dbhost = "localhost";
-        $dbpassword = "";
-        $dbdatabas = "individualProject";
-
+    include ('./includes/config.php')
       $connection = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbdatabas);
       $result = mysqli_query( $connection, "SELECT * FROM abouttext WHERE id IN (1, 2)" );
 

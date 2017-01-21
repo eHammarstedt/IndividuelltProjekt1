@@ -1,13 +1,5 @@
-﻿<?php include('./includes/header.php');
-
-        $dbusername = "root";
-        $dbhost = "localhost";
-        $dbpassword = "";
-        $dbdatabas = "individualProject";
-
-      $connection = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbdatabas);
-      $result = mysqli_query( $connection, "SELECT * FROM abouttext WHERE id IN (1, 2)" );
-
+﻿<?php 
+    include('./includes/header.php');
 ?>
 <body class="bg-grad--1a mobile--bg-grad--1a mobile--bg--1c">
     <!--Menu Start-->

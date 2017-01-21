@@ -1,3 +1,24 @@
+<?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "induvidualProject"; 
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
+    echo "Connected successfully";
+
+    $query = sprintf("SELECT * FROM users WHERE user='%s' AND password='%s'",
+            mysql_real_escape_string($username),
+            mysql_real_escape_string($password));
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" class="borderStyleEdge">
 <head>
