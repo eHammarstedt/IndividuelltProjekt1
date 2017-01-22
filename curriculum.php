@@ -1,15 +1,4 @@
-﻿<?php include('./includes/header.php');
-
-        $dbusername = "root";
-        $dbhost = "localhost";
-        $dbpassword = "";
-        $dbdatabas = "individualProject";
-
-      $connection = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbdatabas);
-      $result = mysqli_query( $connection, "SELECT * FROM abouttext WHERE id IN (1, 2)" );
-
-?>
-<body class="bg-grad--2a bg--2c mobile--bg--2b">
+﻿<body class="bg-grad--2a bg--2c mobile--bg--2b">
     <!--Menu Start-->
     <header>
         <?php
@@ -188,8 +177,3 @@
         </div>
     </main>
     <!--Content end-->
-    <?php
-        include './includes/footer.php';    
-    ?>
-</body>
-</html>

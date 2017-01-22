@@ -15,7 +15,7 @@ $(document).on('keyup', function (e) {
         	&& codeArray[6] === 37 && codeArray[7] === 39
         	&& codeArray[8] === 66 && codeArray[9] === 65
         	&& codeArray[10] === 13) {
-            window.location.href = "/hangman.php";
+            window.location.href = "?page=hangman";
             timer = 2000;
         }
     } 

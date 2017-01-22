@@ -1,49 +1,49 @@
-var words = ["Elin","Lakrits"];
+var words = ["Elin", "Lakrits", "kokos"];
 var randomNumber = Math.floor(Math.random() * words.length);
+gameOver = false;
+youWin = false;
 
 $( document ).ready(function() {
-	writeWord(words[randomNumber]);
+	writeUnderscores(words[randomNumber]);
 });
 
-//skriv ut _ i DOM
-function writeWord(word){
-	var wordLetters = word.split('');
-	$.each(wordLetters, function(){
-		$("#wordPlaceholder").append("_");
-	});
-}
 
-//kör en funtion när man klickar på en tangent
+//If letter is pressed, start function
 $(document).on('keyup', function(e){
+	if (gameOver==false) {
+		var keyPressed = e.keyCode || e.which;
+		var letter = String.fromCharCode(keyPressed);
 
-	var keyPressed = e.keyCode || e.which;
-	var letter = String.fromCharCode(keyPressed);
-	var lakrits="";
-
-	if(keyPressed > 64 && keyPressed < 91)
-		lakrits = isLetterInWord(words[randomNumber],letter);
-		console.log(letter + " in " + words[randomNumber] + "? " + lakrits);
+		if(keyPressed > 64 && keyPressed < 91){
+			isLetterInWord(words[randomNumber],letter);
+		}
+	}
 });
 
-//Kollar om bokstav finns i ordet
+//Check if letter is in the word
 function isLetterInWord(word, letter) {
 
 	word = word.toLowerCase();
 	letter = letter.toLowerCase();
 	var wordLetters = word.split('');
-	
-	for (var i = wordLetters.length - 1; i >= 0; i--) {
+	var didMatch = false;
+
+	for (var i = 0; i < wordLetters.length; i++) {
 
 		if(wordLetters[i] === letter){
-			whereToPUSH(letter, i)
-			return true;
-		} 
+			didMatch = true;
+			PutLetterInPlace(letter, i)
+		}
 	}
-	return false;
+
+	if (didMatch === false) {
+		hangTheMan();
+	}
+
+	winGame(word);
 }
 
-//koll vafan skiten ligger i längen på ordet 
-function whereToPUSH(letter, i) {
+function PutLetterInPlace(letter, i) {
 
 	var underscoresString = $("#wordPlaceholder").text();
 	var	underscoresArray = underscoresString.split('');
@@ -52,14 +52,56 @@ function whereToPUSH(letter, i) {
 	$("#wordPlaceholder").text(underscoresArray.join(""));
 }
 
+//Write out the correct length of "_" in DOM
+function writeUnderscores(word){
+	$("#wordPlaceholder").text("")
+	var wordLetters = word.split('');
+	$.each(wordLetters, function(){
+		$("#wordPlaceholder").append("_");
+	});
+}
 
-//byt ut rätt _ med rätt bokstav 
-	
+//Kills you if you are WRONG!
+function hangTheMan(){
+	$(".life.active").last().toggleClass("active");
+	if($(".life.active").length == 0){
+		gameOver = true;
+		toggleResetBtn();
+		//make a game over text pop up
+	}
+}
 
+//display "reset game" button
+function toggleResetBtn(){
+	if (gameOver==true || youWin==true) {
+		$("#reset.active").toggleClass("active");
+		$("#reset").click(resetGame);	
+	}
+}
 
+//reset game
+function resetGame(){
 
+	if(gameOver==true || youWin==true){
 
+		randomNumber = Math.floor(Math.random() * words.length);
+		writeUnderscores(words[randomNumber]);
+		$(".life").toggleClass("active");
+		$("#reset").toggleClass("active");
+		gameOver=false;
+		youWin=false;
 
+	}
+}
+
+//check if win!
+function winGame(word){
+	if($("#wordPlaceholder").text() == word){
+		youWin = true;
+		toggleResetBtn();
+		alert("you won madda fakka!");
+	}
+}
 
 
 

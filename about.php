@@ -1,9 +1,3 @@
-<?php include('./includes/header.php');
-    include ('./includes/config.php')
-      $connection = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbdatabas);
-      $result = mysqli_query( $connection, "SELECT * FROM abouttext WHERE id IN (1, 2)" );
-
-?>
 <body class="bg-grad--4a bg--4b mobile--bg--4c">
     <!--Menu Start-->
     <header>
@@ -58,7 +52,7 @@
                             </div>
                             <div class="block-hz-split__col block-hz-split__col--50 bg--4b desktop--only">
                                 <h3 class="desktop--contact">
-                                    <a href="contact.htm">contact me!</a>
+                                    <a href="?page=contact">contact me!</a>
                                 </h3>
                             </div>
                         </div>
@@ -74,8 +68,3 @@
             </div>
         </div>
     </main>
-    <?php
-        include './includes/footer.php';    
-    ?>
-</body>
-</html>
