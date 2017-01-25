@@ -1,6 +1,7 @@
 <nav id="menu" role="navigation">
     <button id="menuBtn" class="desktop--hidden"><img src="img/menu.png"/></button>
     <ul class="borderStyle">
+        
         <li id="homebtn" class="desktop--hidden">
             <a href="index.htm?id=page" id="active">
                 Home

@@ -12,7 +12,7 @@
             <div class="divContent2">
                 <div class="block-hz-split block-hz-split--medium">
                     <div class="block-hz-split__over bg--white mobile--border mobile--border-top" id="captionUnderConstruction">
-                        <h1>under construction</h1>
+                        <h1 class="<?php if(loggedIn()){echo "editable-text";}?>">under construction</h1>
                     </div>
 
                     <!--top left side start-->

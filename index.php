@@ -1,4 +1,6 @@
-﻿<?php   
+﻿<?php 
+    session_start();
+    include('./admin/tools.php');
     include('./includes/header.php');
     include('./DB/config.php');
 

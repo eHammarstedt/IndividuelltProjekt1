@@ -1,6 +1,16 @@
 <nav id="menu" role="navigation">
     <button id="menuBtn" class="desktop--hidden"><img src="img/menu.png"/></button>
     <ul class="borderStyle">
+        <?php if(loggedIn()){?>
+            <li>
+                <p id="loggedIn">Logged in as admin</p>
+            </li>
+            <li>
+                <a href="?page=guestbook">
+                    guestbook
+                </a>
+            </li>
+        <?php }?>
         <li id="homebtn" class="desktop--hidden">
             <a href="?page=" id="active">
                 Home

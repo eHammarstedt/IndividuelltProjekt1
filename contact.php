@@ -13,7 +13,7 @@
                 <div class="block-hz-split block-hz-split--medium bg--3a">
                     <div class="block-hz-split__over bg--white mobile--header">
                         <h1>
-                            get in touch
+                            <span class="<?php if(loggedIn()){echo "editable-text";}?>">get in touch</span>
                             <small><a href="mailto:elinhammarstedt@gmail.com">elinhammarstedt@gmail.com</a></small>
                         </h1>
                     </div>
@@ -38,7 +38,7 @@
                             <div class="block-hz-split__col block-hz-split__col--20 bg--3a bg--dot">
                             </div>
                             <div class="block-hz-split__col block-hz-split__col--80 block--padding-05 bg--white mobile--border">
-                                <h3 class="mobile--padding-top-15" id="workTogetherCaption">Let's work together!</h3>
+                                <h3 class="mobile--padding-top-15 <?php if(loggedIn()){echo "editable-text";}?>" id="workTogetherCaption">Let's work together!</h3>
                                 <p class="text--center">
                                     <a class="share-btn share-facebook" target="_blank" href="https://www.facebook.com/ElinFrontEndDeveloper"></a>
                                     <a class="share-btn share-twitter" target="_blank" href="https://twitter.com/_eHammarstedt_"></a>
@@ -56,8 +56,8 @@
                     <!--bottom right side start-->
                     <div class="block-hz-split__col block-hz-split__col--50 bg--3a border--top">
                         <div class="block-hz-split">
-                            <div class="block-hz-split__col block-hz-split__col--50 bg--3b mobile--bg--3c mobile--small-fill mobile--border">
-                                <p class="text--center">Leave a message!</p><br>
+                            <div class="block-hz-split__col block-hz-split__col--50 bg--3b mobile--bg--3c mobile--medium-fill mobile--border">
+                                <p class="text--center whiteHeader <?php if(loggedIn()){echo "editable-text";}?>">Leave a message!</p><br>
                                 <form>
                                     <input type="text" name="firstname" placeholder="Name"><br>
                                     <input type="text" name="email" placeholder="example@mail.com"><br>
@@ -66,7 +66,7 @@
                                 </form>
                             </div>
                             <div class="block-hz-split__col block-hz-split__col--50 bg--3c">
-                            <p class="text--center">GuestBook</p>
+                            
                             </div>
                         </div>
                     </div>

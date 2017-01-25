@@ -75,12 +75,13 @@
         font-family: 'Roboto', sans-serif; 
         font-weight: 400;
     }
-
+    form{
+        text-align: center;
+    }
     input{
         width: 200px;
         height: 40px;
         border: solid 5px black;
-        margin-left: 55px;
         margin-bottom: 15px;
         text-indent: 10px;  
     }
@@ -101,7 +102,6 @@
         height: 100px;
         max-height: 120px;
         border: solid 5px black;
-        margin-left: 55px;
         margin-bottom: 15px;
         text-indent: 10px;
         padding-top: 10px;
@@ -537,7 +537,16 @@
     #captionUnderConstruction{
         transform: rotate(-4deg) translate(-50%, -60%);
     }
-
+    .whiteHeader{
+        color: White;
+        font-weight: bold;
+        font-size: 1.4em;
+        padding-top: 20px;
+    }
+    #loggedIn{
+        color: white;
+        font-weight: bold;
+    }
     /*------share buttons --------*/
     .share-btn{
         display: inline-block;

@@ -56,7 +56,45 @@
         .block-left__col p{
             padding: 0px 20px;
         }
+    form{
+        text-align: center;
+    }
+    input{
+        width: 200px;
+        height: 40px;
+        border: solid 5px black;
+        margin-bottom: 15px;
+        text-indent: 10px;  
+    }
+    input.submitBtn{
+        text-indent: 0px;
+    }
 
+    input:focus{
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        outline: solid 5px white;
+    }
+    textarea{
+        width: 200px;
+        max-width: 200px;
+        height: 100px;
+        max-height: 120px;
+        border: solid 5px black;
+        margin-bottom: 15px;
+        text-indent: 10px;
+        padding-top: 10px;
+    }
+
+    textarea:focus{
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        outline: solid 5px white;
+    }
     /*-----------------menu-----------------*/
     a{
         display: inline-block;
@@ -170,6 +208,9 @@
     .mobile--small-fill{
         height: 100px;
     }
+    .mobile--medium-fill{
+        min-height: 400px;
+    }
     .mobile--large-fill{
         height: 300px;
         width: 100%;
@@ -264,6 +305,12 @@
             border-top: none;
             border-bottom: 10px solid black;
         }
+         .whiteHeader{
+        color: White;
+        font-weight: bold;
+        font-size: 1.4em;
+        padding-top: 20px;
+    }
 
     /*-----------------Background styles-----------------*/
     .bg--wave {
