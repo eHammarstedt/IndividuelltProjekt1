@@ -1,4 +1,4 @@
-﻿<body class="bg-grad--5a bg--5c mobile--bg--5b">
+<body class="bg-grad--5a bg--5c mobile--bg--5b">
     <!--Menu Start-->
     <header>
         <?php
@@ -12,7 +12,7 @@
             <div class="divContent2">
                 <div class="block-hz-split block-hz-split--medium">
                     <div class="block-hz-split__over bg--white mobile--border mobile--border-top" id="captionUnderConstruction">
-                        <h1 class="<?php if(loggedIn()){echo "editable-text";}?>">under construction</h1>
+                        <h1 class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_portfolioTitel?>"><?php echo getTextFromDb($textId_portfolioTitel)?></h1>
                     </div>
 
                     <!--top left side start-->
@@ -33,6 +33,7 @@
                     <div class="block-hz-split__col block-hz-split__col--50 border--top">
                         <div class="block-hz-split">
                             <div class="block-hz-split__col block-hz-split__col--20 bg--5b">
+                                <!--grey empty space-->
                             </div>
                             <div class="block-hz-split__col block-hz-split__col--80 block--padding-05 bg--white mobile--margin-top-15 mobile--border mobile--border-top">
                                <iframe src="https://player.vimeo.com/video/6246701?autoplay=1&loop=1&color=ffff00&title=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -45,8 +46,12 @@
                     <div class="block-hz-split__col block-hz-split__col--50 bg--5a border--top">
                         <div class="block-hz-split">
                             <div class="block-hz-split__col block-hz-split__col--50 bg--stripe bg--5a">
+                                <!--yellow stripes-->
                             </div>
                             <div class="block-hz-split__col block-hz-split__col--50 bg--5b">
+                                <h2>Projects</h2>
+                                <h4><a href="http://perhenric.se/gp1/">team project 1</a></h4>
+                                <h4>team project 2</h4>
                             </div>
                         </div>
                     </div>

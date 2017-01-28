@@ -1,4 +1,4 @@
-﻿<body class="bg-grad--2a bg--2c mobile--bg--2b">
+<body class="bg-grad--2a bg--2c mobile--bg--2b">
     <!--Menu Start-->
     <header>
         <?php
@@ -18,40 +18,29 @@
                             <div class="mobile--expand-btn bg--white">
                                 <div class="expand-arrow"></div>
                             </div>
-                            <h4 class="mobile--header">Experience</h4>
+                            <h4 class="mobile--header <?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvExperience?>"><?php echo getTextFromDb($textId_cvExperience)?></h4>
                         </div>
                         <!--caption for mobile end-->
 
                         <div class="block-left__col block-left__col--20 bg--white mobile--border">
-                            <h4>IKEA</h4>
-                            <p>Digital Artist</p>
-                            <p>oct 2013 - aug 2016</p>
-                            <p>
-                                produced content for</br>
-                                IKEA.com </br>
-                                Catalogue 2014 - 2015 </br>
-                                Digital Catalogue 2015 - 2016</br>
-                                Digital Catalogue 2016 - 2017</br>
-                                Buying guides</br>
+                            <h4 class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvJobOne?>"><?php echo getTextFromDb($textId_cvJobOne)?></h4>
+                            <p class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvJobOneContent?>"><?php echo getTextFromDb($textId_cvJobOneContent)?>
                             </p>
                         </div>
                         <div class="block-left__col block-left__col--20 bg--white mobile--border">
-                            <h4>Exotic matter</h4>
-                            <p>Naiad TD &amp; 3D artist</p>
-                            <p>jan 2012 - june 2012</p>
-                            <p></p>
+                            <h4 class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvJobTwo?>"><?php echo getTextFromDb($textId_cvJobTwo)?></h4>
+                            <p class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvJobTwoContent?>"><?php echo getTextFromDb($textId_cvJobTwoContent)?>
+                            </p>
                         </div>
                         <div class="block-left__col block-left__col--20 bg--white mobile--border">
-                            <h4>Filmtecknarna</h4>
-                            <p>3D artist</p>
-                            <p>march 2009 - june 2009</p>
-                            <p></p>
+                            <h4 class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvJobThree?>"><?php echo getTextFromDb($textId_cvJobThree)?></h4>
+                            <p class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvJobThreeContent?>"><?php echo getTextFromDb($textId_cvJobThreeContent)?>
+                            </p>
                         </div>
                         <div class="block-left__col block-left__col--20 bg--white mobile--border">
-                            <h4>ikea</h4>
-                            <p>retousch artist</p>
-                            <p>jan 2009 - march 2009</p>
-                            <p></p>
+                            <h4 class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvJobFour?>"><?php echo getTextFromDb($textId_cvJobFour)?></h4>
+                            <p class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvJobFourContent?>"><?php echo getTextFromDb($textId_cvJobFourContent)?>
+                            </p>
                         </div>
 
                         <!--caption for desktop start-->
@@ -59,7 +48,7 @@
                             <div class="expand-btn bg--white">
                                 <div class="expand-arrow"></div>
                             </div>
-                            <h4 class="mobile--header">Experience</h4>
+                            <h4 class="mobile--header <?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvExperience?>"><?php echo getTextFromDb($textId_cvExperience)?></h4>
                         </div>
                         <!--caption for desktop end-->
                     </div>
@@ -70,29 +59,29 @@
                             <div class="mobile--expand-btn bg--white">
                                 <div class="expand-arrow"></div>
                             </div>
-                            <h4 class="mobile--header">education</h4>
+                            <h4 class="mobile--header <?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvEducation?>"><?php echo getTextFromDb($textId_cvEducation)?></h4>
                         </div>
                         <!--caption for mobile end-->
 
                         <div class="block-left__col block-left__col--20 bg--white mobile--border">
-                            <h4>KYH</h4>
-                            <p>Front end developer</p>
-                            <p>jan 2012 - june 2012</p>
+                            <h4 class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSchoolOne?>"><?php echo getTextFromDb($textId_cvSchoolOne)?></h4>
+                            <p class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSchoolOneContent?>"><?php echo getTextFromDb($textId_cvSchoolOneContent)?>
+                            </p>
                         </div>
                         <div class="block-left__col block-left__col--20 bg--white mobile--border">
-                            <h4>nackademin</h4>
-                            <p>3D artist</p>
-                            <p>jan 2012 - june 2012</p>
+                            <h4 class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSchoolTwo?>"><?php echo getTextFromDb($textId_cvSchoolTwo)?></h4>
+                            <p class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSchoolTwoContent?>"><?php echo getTextFromDb($textId_cvSchoolTwoContent)?>
+                            </p>
                         </div>
                         <div class="block-left__col block-left__col--20 bg--white mobile--border">
-                            <h4>Makeup</h4>
-                            <p>master make up artist</p>
-                            <p>march 2009 - june 2009</p>
+                            <h4 class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSchoolThree?>"><?php echo getTextFromDb($textId_cvSchoolThree)?></h4>
+                            <p class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSchoolThreeContent?>"><?php echo getTextFromDb($textId_cvSchoolThreeContent)?>
+                            </p>
                         </div>
                         <div class="block-left__col block-left__col--20 bg--white mobile--border">
-                            <h4>campus i12</h4>
-                            <p>graphical artist</p>
-                            <p>jan 2009 - march 2009</p>
+                            <h4 class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSchoolFour?>"><?php echo getTextFromDb($textId_cvSchoolFour)?></h4>
+                            <p class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSchoolFourContent?>"><?php echo getTextFromDb($textId_cvSchoolFourContent)?>
+                            </p>
                         </div>
 
                         <!--caption for desktop start-->
@@ -100,7 +89,7 @@
                             <div class="expand-btn bg--white">
                                 <div class="expand-arrow"></div>
                             </div>
-                            <h4 class="mobile--header">education</h4>
+                            <h4 class="mobile--header <?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvEducation?>"><?php echo getTextFromDb($textId_cvEducation)?></h4>
                         </div>
                         <!--caption for desktop end-->
                     </div>
@@ -111,36 +100,29 @@
                             <div class="mobile--expand-btn bg--white">
                                 <div class="expand-arrow"></div>
                             </div>
-                            <h4 class="mobile--header">Skills</h4>
+                            <h4 class="mobile--header <?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSkills?>"><?php echo getTextFromDb($textId_cvSkills)?></h4>
                         </div>
                         <!--caption for mobile end-->
 
                         <div class="block-left__col block-left__col--20 bg--white mobile--border">
-                            <h4>Front end</h4>
-                            <p>HTML</p>
-                            <p>CSS</p>
-                            <p>JavaScript</p>
-                            <p>PHP</p>
+                            <h4 class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSkillOne?>"><?php echo getTextFromDb($textId_cvSkillOne)?></h4>
+                            <p class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSkillOneContent?>"><?php echo getTextFromDb($textId_cvSkillOneContent)?>
+                            </p>
                         </div>
                         <div class="block-left__col block-left__col--20 bg--white mobile--border">
-                            <h4>3D</h4>
-                            <p>Modelling</p>
-                            <p>animation</p>
-                            <p>rendering</p>
+                            <h4 class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSkillTwo?>"><?php echo getTextFromDb($textId_cvSkillTwo)?></h4>
+                            <p class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSkillTwoContent?>"><?php echo getTextFromDb($textId_cvSkillTwoContent)?>
+                            </p>
                         </div>
                         <div class="block-left__col block-left__col--20 bg--white mobile--border">
-                            <h4>make up</h4>
-                            <p>Bridal</p>
-                            <p>fashion</p>
-                            <p>VFX</p>
-                            <p>body paint</p>
+                            <h4 class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSkillThree?>"><?php echo getTextFromDb($textId_cvSkillThree)?></h4>
+                            <p class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSkillThreeContent?>"><?php echo getTextFromDb($textId_cvSkillThreeContent)?>
+                            </p>
                         </div>
                         <div class="block-left__col block-left__col--20 bg--white mobile--border">
-                            <h4>interests</h4>
-                            <p>Board games</p>
-                            <p>Video games</p>
-                            <p>indoor climbing</p>
-                            <p>acro yoga</p>
+                            <h4 class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSkillFour?>"><?php echo getTextFromDb($textId_cvSkillFour)?></h4>
+                            <p class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSkillFourContent?>"><?php echo getTextFromDb($textId_cvSkillFourContent)?>
+                            </p>
                         </div>
 
                         <!--caption for desktop start-->
@@ -148,7 +130,7 @@
                             <div class="expand-btn bg--white">
                                 <div class="expand-arrow"></div>
                             </div>
-                            <h4 class="mobile--header">Skills</h4>
+                            <h4 class="mobile--header <?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_cvSkills?>"><?php echo getTextFromDb($textId_cvSkills)?></h4>
                         </div>
                         <!--caption for desktop end-->
                     </div>

@@ -12,7 +12,7 @@
             <div class="divContent2">
                 <div class="block-hz-split block-hz-split--medium">
                     <div class="block-hz-split__over bg--white mobile--header">
-                        <h1 class="<?php if(loggedIn()){echo "editable-text";}?>">Hello!</h1>
+                        <h1 class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_aboutTitle?>"><?php echo getTextFromDb($textId_aboutTitle)?></h1>
                     </div>
 
                     <!--top left side start-->
@@ -35,10 +35,8 @@
                             <div class="block-hz-split__col block-hz-split__col--20 bg--wave bg--4b">
                             </div>
                             <div class="block-hz-split__col block-hz-split__col--80 block--padding-05 bg--white mobile--border">
-                                <h3 class="mobile--padding-top-15 <?php if(loggedIn()){echo "editable-text";}?>">I'm Elin</h3>
-                                <p class="text--left <?php if(loggedIn()){echo "editable-text";}?>">this is my digital portfolio.
-                                This website depicts all of the work that I have completed throughout this year.
-                                it displays the growth and the progress that i have made, as well as the assignments i am most proud of. over the past months, I have put time, energy, and effort into my tasks and have learned more than ever because of it. Reflecting on my work has shown me how far I have come both a student, and a person.</p>
+                                <h3 class="mobile--padding-top-15 <?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_aboutTitleTwo?>"><?php echo getTextFromDb($textId_aboutTitleTwo)?></h3>
+                                <p class="text--left <?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_aboutContent?>"><?php echo getTextFromDb($textId_aboutContent)?></p>
                             </div>
                         </div>
                     </div>

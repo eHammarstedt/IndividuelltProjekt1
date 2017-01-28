@@ -63,7 +63,7 @@ function writeUnderscores(word){
 
 //Kills you if you are WRONG!
 function hangTheMan(){
-	$(".life.active").last().toggleClass("active");
+	$(".life.active").last().removeClass("active");
 	if($(".life.active").length == 0){
 		gameOver = true;
 		toggleResetBtn();
@@ -74,7 +74,7 @@ function hangTheMan(){
 //display "reset game" button
 function toggleResetBtn(){
 	if (gameOver==true || youWin==true) {
-		$("#reset.active").toggleClass("active");
+		$("#reset.hidden").removeClass("hidden");
 		$("#reset").click(resetGame);	
 	}
 }
@@ -86,8 +86,8 @@ function resetGame(){
 
 		randomNumber = Math.floor(Math.random() * words.length);
 		writeUnderscores(words[randomNumber]);
-		$(".life").toggleClass("active");
-		$("#reset").toggleClass("active");
+		$(".life").addClass("active");
+		$("#reset").addClass("hidden");
 		gameOver=false;
 		youWin=false;
 

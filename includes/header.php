@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/mobile.css" />
     <link rel="stylesheet" type="text/css" href="css/tablet.css" />
     <link rel="stylesheet" type="text/css" href="css/desktop.css" />
+    <link rel="stylesheet" type="text/css" href="css/hangman.css" />
     <!--jQuery-->
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 

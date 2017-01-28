@@ -12,8 +12,7 @@
             <div class="divContent2">
                 <div class="block-hz-split block-hz-split--large">
                     <div class="block-hz-split__over bg--white mobile--border mobile--border-top">
-                        <h1 class="<?php if(loggedIn()){echo "editable-text";}?>">Elin Hammarstedt<br>
-                        Front end developer</h1>
+                        <h1 class="<?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_startTitel?>"><?php echo getTextFromDb($textId_startTitel)?></h1>
                     </div>
 
                     <!--top left side start-->

@@ -1,0 +1,66 @@
+body{
+	background-color: #bc3e3e;
+	background-size: 100% 100%, 40px 40px;
+    background-image:linear-gradient(to right bottom, grey 50%,transparent 50%), url("../img/stripe.png");
+}
+#container{
+	background-color: rgba( 256, 256, 256, 0.5);
+	margin: auto; 
+	height: 500px;
+	width: 1000px;
+}
+
+#rules{
+	padding-top: 75px;
+}
+#hangman{
+	text-align: center;
+}
+.life{
+	box-sizing: border-box;
+	border: 5px solid grey;
+	display: inline-block;
+	height: 25px;
+	margin: 10px;
+	margin-top: 20px;
+	transition: ease-in-out 1s;
+	width: 25px;
+}
+
+.life.active{
+	border: 5px solid #bc3e3e;
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+}
+
+#reset{
+	
+	background-color: white;
+	border: 5px solid black;
+	border-top-right-radius: 25PX;
+	border-bottom-right-radius: 25PX;
+	border-bottom-left-radius: 25PX;
+	border-top-left-radius: 25PX;
+	-webkit-box-shadow: 6px 6px 5px -5px rgba(0,0,0,0.5);
+	-moz-box-shadow: 6px 6px 5px -5px rgba(0,0,0,0.5);
+	box-shadow: 6px 6px 5px -5px rgba(0,0,0,0.5);
+	color: black;
+	display: inline;
+	font-family: 'Roboto', sans-serif; 
+    font-weight: 400;
+    font-size: 15px;
+	height: 50px;
+	width: 200px;
+}
+#reset:hover{
+	-webkit-box-shadow: 4px 4px 5px -5px rgba(0,0,0,0.3);
+	-moz-box-shadow: 4px 4px 5px -5px rgba(0,0,0,0.3);
+	box-shadow: 4px 4px 5px -5px rgba(0,0,0,0.3);
+}
+#reset.hidden{
+	display: none;
+}
+
+
+

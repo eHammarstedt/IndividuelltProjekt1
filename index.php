@@ -1,5 +1,4 @@
 ﻿<?php 
-    session_start();
     include('./admin/tools.php');
     include('./includes/header.php');
     include('./DB/config.php');
@@ -11,6 +10,9 @@
     }
     
     switch ($page) {
+        case "guestbook":
+            include ('guestbook.php');
+            break;
         case "about":
             include ('about.php');
             break;

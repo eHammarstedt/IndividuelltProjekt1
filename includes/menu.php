@@ -3,9 +3,6 @@
     <ul class="borderStyle">
         <?php if(loggedIn()){?>
             <li>
-                <p id="loggedIn">Logged in as admin</p>
-            </li>
-            <li>
                 <a href="?page=guestbook">
                     guestbook
                 </a>
@@ -40,5 +37,10 @@
                 contact
             </a>
         </li>
+        <?php if(loggedIn()){?>
+            <li>
+                <p id="loggedIn">Logged in as admin</p>
+            </li>
+        <?php }?>
     </ul>
 </nav>
