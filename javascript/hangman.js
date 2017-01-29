@@ -1,4 +1,4 @@
-var words = ["Elin", "Lakrits", "kokos"];
+var words = ["Elin", "Lakrits", "kokos","Addax","Aguti","Ammon","Ariel","Bison","Bitch","Bobac","Bobak","Bongo","Brock","Bruin","Burro","Camel","Canis","Chimp","Chiru","Civet","Coati","Coney","Coypu","Crone","Cuddy","Daman","Dhole","Dingo","Dogie","Drill","Eland","Equus","Felis","Filly","Fitch","Fossa","Gayal","Genet","Goral","Grice","Gryce","Hinny","Hippo","Horse","Hutia","Hyena","Hyrax","Indri","Izard","Jocko","Kaama","Kiang","Koala","Kulan","Kyloe","Lemur","Liger","Llama","Loris","Magot","Manis","Manul","Mhorr","Moose","Morse","Mouse","Nagor","Nyala","Okapi","Orang","Oribi","Otary","Otter","Ounce","Panda","Pekan","Phoca","Pongo","Potto","Puppy","Ratel","Rhino","Royal","Sable","Saiga","Sajou","Sasin","Serow","Sheep","Shoat","Shote","Shrew","Skunk","Sloth","Sorel","Spade","Spado","Steer","Stirk","Stoat","Swine","Tabby","Takin","Tapir","Tatou","Tiger","Tigon","Urial","Urson","Vison","Vixen","Whale","Whelp","Yapok","Zebra","Zerda","Zibet","Zoril","Zorro"];
 var randomNumber = Math.floor(Math.random() * words.length);
 gameOver = false;
 youWin = false;
@@ -66,6 +66,7 @@ function hangTheMan(){
 	$(".life.active").last().removeClass("active");
 	if($(".life.active").length == 0){
 		gameOver = true;
+		showCorrectWord(words[randomNumber]);
 		toggleResetBtn();
 		//make a game over text pop up
 	}
@@ -88,13 +89,14 @@ function resetGame(){
 		writeUnderscores(words[randomNumber]);
 		$(".life").addClass("active");
 		$("#reset").addClass("hidden");
+		$("#gameOver").addClass("hidden");
 		gameOver=false;
 		youWin=false;
 
 	}
 }
 
-//check if win!
+//check if hir won!
 function winGame(word){
 	if($("#wordPlaceholder").text() == word){
 		youWin = true;
@@ -103,6 +105,16 @@ function winGame(word){
 	}
 }
 
+
+//if you lose, show the correct word
+function showCorrectWord(word){
+	if(gameOver==true){
+		$("#wordPlaceholder").text(word)
+		$("#gameOver").removeClass("hidden")
+	}
+}
+
+//display guessed letters 
 
 
 

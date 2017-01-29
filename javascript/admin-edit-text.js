@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
 		var textarea = $("<textarea></textarea>");
 		textarea.addClass("editText")
-		textarea.val( $(this).text() );
+		textarea.val( $(this).html().replace(/<br>/gi,"\n") );
 		textarea.css({
 			"font-family": $(this).css("font-family"),
 			"font-size": $(this).css("font-size"),
@@ -23,12 +23,13 @@ $( document ).ready(function() {
 
 
 		textarea.blur(function(){
-			originalElement.text(textarea.val());
+			var text = textarea.val().replace(/(?:\r\n|\r|\n)/g, '<br />');
+			originalElement.html(text);
 			$(this).replaceWith(originalElement);
 
 			originalElement.click(clickThis);
 			var textId = originalElement.data("text-id");
-			updateOnServer(textId,textarea.val());
+			updateOnServer(textId,text);
 		});
 	}
 

@@ -19,6 +19,7 @@
 			<span class="life active"></span>
 			<span class="life active"></span>
 			<h3 id="wordPlaceholder"></h3>
+			<h3 id="gameOver" class="hidden">Game over!</h3>
 			<button id="reset" class="hidden">Play it again Sam!</button>
 		</div>
 	</div>
