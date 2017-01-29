@@ -9,10 +9,15 @@
     <!--Content start-->
     <main>
         <div class="divContent" id="Page-Index">
+            <h1>
+                Hej snygging! <br/>
+                Logga in om du är The chosen one, <br/>
+                annars kan du dra åt sjumilaskogen!
+            </h1>
             <form method="post">
                 <input type="text" name="username"/>
                 <input type="password" name="password"/>
-                <button type="submit">Login</button>
+                <button type="submit" class="loginBtn">Login</button>
                 <p class="error">
                     <?php 
                         echo $loginError;

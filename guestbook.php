@@ -39,6 +39,12 @@
                                             echo $row["message"];
                                         ?>
                                     </p>
+                                    <form method="post" action="admin/deleteMsg.php">
+                                        <input type="hidden" name="msgId" value="<?php echo $row["id"];?>">
+                                        <button type="submit" class="deleteBtn">
+                                            Del
+                                        </button>
+                                    </form>
                                 </div>
                                 <?php 
                             }
