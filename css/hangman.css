@@ -10,11 +10,11 @@ body{
 	width: 1000px;
 }
 
-#rules{
-	padding-top: 75px;
-}
 #hangman{
 	text-align: center;
+}
+.hidden{
+	display: none !important;
 }
 .life{
 	box-sizing: border-box;
@@ -35,7 +35,6 @@ body{
 }
 
 #reset{
-	
 	background-color: white;
 	border: 5px solid black;
 	border-top-right-radius: 25PX;
@@ -46,11 +45,13 @@ body{
 	-moz-box-shadow: 6px 6px 5px -5px rgba(0,0,0,0.5);
 	box-shadow: 6px 6px 5px -5px rgba(0,0,0,0.5);
 	color: black;
-	display: inline;
+	display: block;
 	font-family: 'Roboto', sans-serif; 
     font-weight: 400;
     font-size: 15px;
 	height: 50px;
+	margin: auto;
+	margin-bottom: 50px;
 	width: 200px;
 }
 #reset:hover{
@@ -58,12 +59,37 @@ body{
 	-moz-box-shadow: 4px 4px 5px -5px rgba(0,0,0,0.3);
 	box-shadow: 4px 4px 5px -5px rgba(0,0,0,0.3);
 }
-#reset.hidden{
-	display: none;
+
+#gameOver{
+	padding-bottom: 20px;
+	color: #bc3e3e;
+
 }
-#gameOver.hidden{
-	display: none;
+#winner{
+	padding-bottom: 20px;
+	color: #58ba3d;
 }
+#container{
+	padding-top: 85px;
+}
+#guessedLetter{
+	color: #bc3e3e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

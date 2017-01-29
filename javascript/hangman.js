@@ -36,8 +36,9 @@ function isLetterInWord(word, letter) {
 		}
 	}
 
-	if (didMatch === false) {
+	if (didMatch === false && checkIfGuessed(letter) === false) {
 		hangTheMan();
+		showGuessedLetters(letter)
 	}
 
 	winGame(word);
@@ -68,17 +69,11 @@ function hangTheMan(){
 		gameOver = true;
 		showCorrectWord(words[randomNumber]);
 		toggleResetBtn();
-		//make a game over text pop up
+		$("#gameOver").removeClass("hidden");
+		$("#rules").addClass("hidden");
 	}
 }
 
-//display "reset game" button
-function toggleResetBtn(){
-	if (gameOver==true || youWin==true) {
-		$("#reset.hidden").removeClass("hidden");
-		$("#reset").click(resetGame);	
-	}
-}
 
 //reset game
 function resetGame(){
@@ -90,9 +85,20 @@ function resetGame(){
 		$(".life").addClass("active");
 		$("#reset").addClass("hidden");
 		$("#gameOver").addClass("hidden");
+		$("#guessedLetter").text("")
+		$("#rules").removeClass("hidden");
+		$("#winner").addClass("hidden");
 		gameOver=false;
 		youWin=false;
 
+	}
+}
+
+//display "reset game" button
+function toggleResetBtn(){
+	if (gameOver==true || youWin==true) {
+		$("#reset.hidden").removeClass("hidden");
+		$("#reset").click(resetGame);	
 	}
 }
 
@@ -101,7 +107,8 @@ function winGame(word){
 	if($("#wordPlaceholder").text() == word){
 		youWin = true;
 		toggleResetBtn();
-		alert("you won madda fakka!");
+		$("#winner").removeClass("hidden");
+		$("#rules").addClass("hidden");
 	}
 }
 
@@ -110,16 +117,22 @@ function winGame(word){
 function showCorrectWord(word){
 	if(gameOver==true){
 		$("#wordPlaceholder").text(word)
-		$("#gameOver").removeClass("hidden")
 	}
 }
 
 //display guessed letters 
+function showGuessedLetters(letter){
+	$("#guessedLetter").append(letter);
+}
 
-
-
-
-
+//check guessed letter
+function checkIfGuessed(letter){
+	if ($("#guessedLetter").text().indexOf(letter) >= 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 
 
