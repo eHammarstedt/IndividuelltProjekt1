@@ -1,10 +1,19 @@
 <?php
     include './DB/textIds.php';
 
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$database = "individualProject";
+    //change to true if test on localhost
+    $debug = false;
+    if ($debug) {
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$database = "individualProject";
+	}else{
+		$servername = "individualproject-219320.mysql.binero.se";
+		$username = "219320_qt91574";
+		$password = "klapaucius";
+		$database = "219320-individualproject";
+	}
 
 	// Create connection
 

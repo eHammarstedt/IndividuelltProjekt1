@@ -36,7 +36,7 @@
                                 <!--grey empty space-->
                             </div>
                             <div class="block-hz-split__col block-hz-split__col--80 block--padding-05 bg--white mobile--margin-top-15 mobile--border mobile--border-top">
-                               <iframe src="https://player.vimeo.com/video/6246701?autoplay=1&loop=1&color=ffff00&title=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                               <iframe id="vimeo" src="https://player.vimeo.com/video/6246701?autoplay=1&loop=1&color=ffff00&title=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                             <div class="block-hz-split__col block-hz-split__col--50 bg--stripe bg--5a">
                                 <!--yellow stripes-->
                             </div>
-                            <div class="block-hz-split__col block-hz-split__col--50 bg--5b">
+                            <div class="block-hz-split__col block-hz-split__col--50 bg--5b mobile--margin-top-15 mobile--border mobile--border-top mobile--bg--5b">
                                 <h2>Projects</h2>
                                 <h4><a href="http://perhenric.se/gp1/">team project 1</a></h4>
                                 <h4>team project 2</h4>

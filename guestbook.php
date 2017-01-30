@@ -1,3 +1,10 @@
+<?php
+    if(!loggedIn()){
+        header("Location: index.php");
+        die();
+    }
+?>
+
 <body class="bg-grad--3a mobile--bg--3a">
     <!--Menu Start-->
     <header>

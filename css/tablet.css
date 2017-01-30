@@ -429,6 +429,8 @@
 
     /*------share buttons --------*/
     .share-btn{
+        background-color: transparent;
+        border-style: none;
         display: inline-block;
         margin: 0 10px;
         padding: 0;
@@ -485,5 +487,10 @@
     #shareEmail{
         background-image: url("../img/simple-black/Email.png");
     }
-
+    #vimeo{
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        max-height: 281px;
+    }
 }

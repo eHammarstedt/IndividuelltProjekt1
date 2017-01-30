@@ -7,11 +7,13 @@
 
     if(loggedIn()){
         header("Location: index.php");
+        die();
     }
     if (isset ($_POST["username"])){
         if ($_POST ["username"] == "commander" && $_POST ["password"] == "lakrits"){
             $_SESSION["loggedin"] = true;
             header("Location: index.php");
+            die();
         }else{
             $loginError = "Wrong username or password...";
         }

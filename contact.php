@@ -87,7 +87,7 @@
                                     <?php if ($messageError != ""){
                                        echo $messageError;
                                     } else {?>
-                                        <p>Thanks for your message, I'll come back to you!</p>
+                                        <p id="thxForMsg">Thanks for your message, I'll come back to you!</p>
                                     <?php } ?>
                                 <?php } else {?>
                                 <p class="text--center whiteHeader <?php if(loggedIn()){echo "editable-text";}?>" data-text-id="<?php echo $textId_contactMsg?>"><?php echo getTextFromDb($textId_contactMsg)?></p>
